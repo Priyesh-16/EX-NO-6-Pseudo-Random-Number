@@ -15,32 +15,28 @@ End the program.
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 int main()
 {
-    int n, i;
-
-    printf("Enter the number of random numbers to generate: ");
+    int n, min, max, i;
+    srand(time(0));
+    printf("Enter number of random numbers: ");
     scanf("%d", &n);
-
- 
-    srand(time(NULL));
-
-    printf("\nPseudorandom numbers:\n");
-
-    for (i = 0; i < n; i++)
+    printf("Enter minimum value: ");
+    scanf("%d", &min);
+    printf("Enter maximum value: ");
+    scanf("%d", &max);
+    printf("Random numbers within range:\n");
+    for(i = 0; i < n; i++)
     {
-        printf("%d ", rand());
+        printf("%d\n", (rand() % (max - min + 1)) + min);
     }
-
-    printf("\n");
-
-    return 0;
 }
+
 ~~~
 # OUTPUT:
 
-<img width="692" height="660" alt="Screenshot 2026-10-29 092151" src="https://github.com/user-attachments/assets/34ef4233-8d5b-4898-a35b-c116c3fc3354" />
+<img width="1917" height="1198" alt="Screenshot 2026-10-30 185632" src="https://github.com/user-attachments/assets/9651e759-ca3c-4004-be19-adc4d67d1d28" />
+
 
 # RESULT:
 Thus,the implementation of Pseudorandom Number is executed successfully.
